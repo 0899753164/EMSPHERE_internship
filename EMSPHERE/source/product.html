@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>product</title>
+
+<style>  
+  #drop_file_zone {
+      background-color: #ffffff; 
+      border: #C7C7C7 2px dashed;
+      width: auto; 
+      height: auto;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      color: #9E9E9E;
+  }
+  #drag_upload_file {
+    margin:0 auto;
+    font-size: 20px;
+  }
+  #drag_upload_file p {
+    text-align: center;
+  }
+  #drag_upload_file #selectfile {
+    display: none;
+  }
+#text-head{
+  font-size: 7vw; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!--content!-->
+<br>
+<!---Form Product-->
+<form id="formproduct" class="needs-validation" method="post" enctype="multipart/form-data">
+ <!-- <div class="form-row">!-->
+    <div class=" col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <!--nav form
+      !-->
+   <ul class="breadcrumb justify-content-center">
+      <li><a class="<?php active('registerForm'); ?>" href="index.php?page=registerForm">REGISTER</a></li>
+      <li><a class="<?php active('productForm'); ?>" href="index.php?page=productForm">PRODUCT</a></li>
+      <li><a class="<?php active('confirmForm'); ?>" href="index.php?page=confirmForm">CONFIRM</a></li>
+      <li><a class="<?php active('completeForm'); ?>" href="index.php?page=completeForm">COMPLETE</a></li>
+    </ul>
+  </div>
+  <hr style="border: 0.5px solid #DDDDDD;">
+    <!--END!-->
+  <!--</div>!-->
+
+  <div class="card-title">
+   <p class="card-title" style="text-align:left; font-size: 20px; color: #9B9B9B">GUCCI CENTER TRADING</p>
+  </div>
+  <div class="row justify-content-md-center">
+  <div class="col-xs-12 col-md-8 col-lg-6">
+    <p>UPLOAD PRODUCT IMAGE (2/5)</p>
+  </div>
+</div>
+<!--Drag files-!-->
+<div class="col-xs-12 col-md-12 col-lg-12" id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+  <div id="drag_upload_file">
+    <p style="color: #9B9B9B">DRAG FILES HERE</p>
+    <p class="col-12">UPLOAD FILE .JPG, .PNG, .JPEG</p>
+    <!----<p><input type="button" value="Select File" onclick="file_explorer();"></p>!-->
+    <p>or&nbsp;
+      <input type="text" value="browse your phone" onclick="file_explorer();" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" multiple style="border: none; color: blue; font-size: 18px;"></p>
+      <input type="file" id="selectfile">
+  </div>
+</div>
+<br>
+<!--END Drag files !-->
+<p style="font-size: 6vw; font-style: bold;">UPLOAD FILES</p>
+<br>
+<!--Preview img Upload !-->
+    <div class="row">
+      <div class="card col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="width: 100%;">
+        <img src="../img/dicut/dicut/pic1@2x.png" class="card-img-top" alt="">
+      </div>
+
+      <div class="card col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="width: 100%;">
+        <img src="../img/dicut/dicut/pic2@2x.png" class="card-img-top" alt="">
+      </div>
+
+      <div class="card col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="width: 100%;">
+        <img src="../img/dicut/dicut/pic2@2x.png" class="card-img-top" alt="">
+      </div>
+      
+      <div class="card col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" style="width: 100%;">
+        <img src="../img/dicut/dicut/pic2@2x.png" class="card-img-top" alt="">
+      </div>
+  </div>
+  <!--END Preview !-->
+<!--button! continue&back-->
+<div class="row justify-content-md-center">
+  <div class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-12" align="center">
+    <a class="<?php active('btn_continue_product'); ?>" href="index.php?page=btn_continue_product">
+      <button type="button" name="" value="" id="form_data" class="btn btn-warning">CONTINUE<i class="fas fa-chevron-right" style="float: right;padding-top: 5px;"></i></button>
+    </a>
+    <a class="<?php active('btn_back_product'); ?>" href="index.php?page=btn_back_product">
+      <button type="button" name="" value="" class="btn btn-dark">BACK</button>
+    </a>
+  </div>
+</div>
+<!--END!-->
+<br>
+
+</form>
+
+<!--footer!-->
+<?php 
+ include("footer.html");
+
+?>
+<!-- <div class="card text-center">
+	<div class="card-footer text-muted">
+    @&nbsp;2017&nbsp;The&nbsp;Mall&nbsp;Group.&nbsp;all&nbsp;rights&nbsp;reserved
+  	</div>
+</div> -->
+
+</div>
+<!------Drag & drop! script-->
+<script type="text/javascript">
+  var fileobj;
+  function upload_file(e)
+  {
+    e.preventDefault();
+    fileobj = e.dataTransfer.files[0];
+    ajax_file_upload(fileobj);
+  }
+  function file_explorer() 
+  {
+    document.getElementById('selectfile').click();
+    document.getElementById('selectfile').onchange = function() 
+    {
+        fileobj = document.getElementById('selectfile').files[0];
+      ajax_file_upload(fileobj);
+    };
+  }
+  function ajax_file_upload(file_obj)
+  {
+    if(file_obj != undefined) 
+    {
+      var form_data = new FormData();
+      form_data.append('file', file_obj);
+      $.ajax(
+        {
+          type: 'POST',
+          url: 'ajax.php',
+          contentType: false,
+          processData: false,
+          data: form_data,
+          success:function(response) 
+          {
+            alert(response);
+            $('#selectfile').val('');
+          }
+        });
+    }
+  }
+</script>
+<!------END Drag & drop!-->
+<!--Toggle Menu Script!-->
+<script>
+function myFunction() 
+{
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") 
+  {
+    x.style.display = "none";
+  } 
+  else 
+  {
+    x.style.display = "block";
+  }
+}
+</script>
+<!--END -->
+</body>
+</html>

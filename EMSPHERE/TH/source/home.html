@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+</head>
+<body>
+<div class="container">
+<!--content!-->
+<br>
+<div class="row justify-content-md-center">
+	<div class="col-xs-12 col-md-12 col-lg-12" align="center"><h5>ร่วมเป็นพันธมิตรกับเอ็มโพเรียม</h5>
+	</div>
+</div>
+    <div class="row imagetiles">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6" style="margin-bottom: 10px;">
+            <a class="<?php active('bannerEmSphere'); ?>" href="index.php?page=bannerEmSphere"><img src="/EMSPHERE/img/1.png" class="img-responsive" width="100%" height="100%"></a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+            <img src="/EMSPHERE/img/2.png" class="img-responsive" width="100%" height="100%">
+        </div>
+    </div>
+<!--END!-->
+<div class="row justify-content-md-center">
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-10" align="center">
+ <button type="button" class="btn btn-warning">ดูโครงการ</button>
+    </div>
+</div>
+<br>
+<!--footer!-->
+<?php 
+ include("../../source/footer.html");
+?>
+<!-- <div class="card text-center">
+	<div class="card-footer text-muted">
+    @&nbsp;2017&nbsp;The&nbsp;Mall&nbsp;Group.&nbsp;all&nbsp;rights&nbsp;reserved
+  	</div>
+</div>
+ -->
+</div>
+<!--Script active link!-->
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

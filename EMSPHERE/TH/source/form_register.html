@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form register</title>
+</head>
+<body>
+<div class="container">
+<!--content!-->
+<br>
+
+<form id="formregister" class="needs-validation" novalidate>
+  <div class="row">
+    <div class=" col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <!--nav form!-->
+      <ul class="breadcrumb justify-content-center">
+        <li>
+          <a class="<?php active('registerForm'); ?>" href="index.php?page=registerForm">ข้อมูลสมัคร</a>
+        </li>
+        <li>
+          <a class="<?php active('productForm'); ?>" href="index.php?page=productForm">ข้อมูลสินค้า</a>
+        </li>
+        <li>
+          <a class="<?php active('confirmForm'); ?>" href="index.php?page=confirmForm">ยืนยันข้อมูล</a>
+        </li>
+        <li>
+          <a class="<?php active('completeForm'); ?>" href="index.php?page=completeForm">ส่งสำเร็จ</a>
+        </li>
+      </ul>
+       <hr style="border: 0.5px solid #DDDDDD;">
+    </div>
+     <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto" style="color: #9B9B9B; font-size: 22px;">รายละเอียดแบบร้านค้า</label>
+  </div>
+   
+</div>
+
+<div class="row">
+  
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">ชื่อแบรนด์ / ชื่อร้านค้า</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" id="validationCustom01" placeholder="GUCCI CENTER TRADING">
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">ประเภทของร้าน</label>
+    <select class="form-control">
+        <option class="form-control" selected>ความงามและเครื่องสำอาง</option>
+        <option class="form-control">...</option>
+      </select>
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">REGUEST SQM.</label>
+    <input type="text" class="form-control" aria-describedby="" placeholder="Ex.290.Sqm">
+  </div>
+   <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">ที่ตั้งร้านค้าปัจจุบัน</label>
+    <input type="text" class="form-control" aria-describedby="" placeholder="ที่อยู่">
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for=""></label>
+    <select class="form-control">
+        <option class="form-control" selected>อำเภอ</option>
+        <option class="form-control">...</option>
+      </select>
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for=""></label>
+    <select class="form-control" value="">
+        <option class="form-control" selected>จังหวัด</option>
+        <option class="form-control">...</option>
+      </select>
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto"></label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="รหัสไปรษณีย์">
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label ffor="validationCustom01" class="col-lg-auto col-md-auto">FACEBOOK</label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="Ex. Facebook/Themall">
+  </div>
+   <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">INSTAGRAM</label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="Ex. ig. Themall">
+  </div>
+   <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">อีเมล์</label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="Ex. mail@gmial.com">
+  </div>
+  <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">โทรศัพท์</label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="Ex. +66909853484">
+  </div>
+  <div class="form-group col-md-6 col-12 col-sm-6 col-md-6 col-lg-6">
+    <label for="validationCustom01" class="col-lg-auto col-md-auto">WEBSITE</label>
+    <input type="text" value="" class="form-control" aria-describedby="" placeholder="ตัวอย่าง. www.Themall.com">
+  </div>
+  <div class="form-group col-md-6 col-lg-6">
+    <label for="">ขายออนไลน์</label>
+  </div>
+  <!--ckeck box! Shop Online!-->
+   <div class="col-xs-12 col-md-8 col-lg-8" align="left">
+    <div class="form-check ">
+      <p><input class="form-check-input col-3 col-sm-3 col-md-3 col-lg-1" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">Lazada</label></p>
+      <p><input class="form-check-input col-3 col-sm-3 col-md-3 col-lg-1" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">Shopee</label></p>
+      <p><input class="form-check-input col-3 col-sm-3 col-md-3 col-lg-1" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">อื่นๆ</label></p>
+    </div>
+  </div>
+  <!--END!-->
+
+  <div class="form-group col-md-8">
+    <label for="">ใบสั่งจอง</label>
+  </div>
+<div>
+</div>
+
+</div>
+<!--Upload Button!-->
+<div class="col-xs-12 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+  <button type="button" class="btn btn-danger col-7 col-sm-7 col-md-5 col-lg-4">
+    <div>
+      <i class="fas fa-file-upload fa-2x" style="float: left;"></i>
+      <span>UPLOAD
+       <h6 style="font-size: 18px; letter-spacing: 1px;">PROJECT&nbsp;DOCUMENT</h6></span>
+     
+    </div>
+  </button>
+</div>
+</form>
+<div class="col-xs-12 col-md-auto col-lg-12" align="left">
+  <div class="form-group col-md-8">
+    <label for="">โครงการที่น่าสนใจ</label>
+  </div>
+
+  <!--Check box!-->
+  <div class="col-xs-12 col-12 col-md-12 col-lg-12" align="left">
+    <div class="form-check ">
+      <p>
+        <input class="form-check-input col-3 col-sm-3 col-md-3 col-lg-1" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">เอ็มสเฟียร์</label>
+         <img id="bg_logo_bt" class="img-responsive col-5 col-md-auto col-lg-8" width="auto" height="auto" align="right" src="../img/dicut/dicut/logo_mobile@2x.png">
+      </p>
+      <p>
+        <input class="form-check-input col-3 col-sm-3 col-md-3 col-lg-1" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">แบงค็อก มอลล์</label>
+         <img id="bg_logo_bt" class="img-responsive col-5 col-md-auto col-lg-8" width="auto" height="auto" align="right" src="../img/dicut/dicut/logo_mall@2x.png">
+      </p>
+    </div>
+  </div>
+  <!--END!-->
+<!--end!-->
+
+<!--Button Continue!-->
+  <div class="col-xs-12 col-12 col-md-auto col-lg-12 col-xl-12" align="center">
+ <a class="<?php active('btn_continueRegist'); ?>" href="index.php?page=btn_continueRegist"><button type="button" class="btn btn-warning col-12 col-lg-8 col-md-auto col-xl-12">ดำเนินการต่อ<i class="fas fa-chevron-right" style="float: right;padding-top: 4px;"></i></button>
+ </a>
+    </div>
+<br>
+
+<!--footer!-->
+<?php 
+ include("../../source/footer.html");
+?>
+<!-- <div class="card text-center">
+	<div class="card-footer text-muted">
+    @&nbsp;2017&nbsp;The&nbsp;Mall&nbsp;Group.&nbsp;all&nbsp;rights&nbsp;reserved
+  	</div>
+</div>
+ -->
+</div>
+<!--Script active link!-->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTER Emsphere</title>
+
+<style>
+  #emsphere_bg{
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  #address, .col-12{
+    float: left;
+    font-size: 1.250em; /*20px*/
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!--content!--> 
+  <br>
+  <img id="emsphere_bg" class="img-responsive col-6 col-sm-6 col-md-5 col-lg-4 " width="auto" height="auto" align="left" src="../img/dicut/dicut/logo_mobile@2x.png">
+
+    <br>
+     <p id="address" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">ที่อยู่ : จุดศูนย์กลางของสุขุมวิท, พร้อมพงษ์, กรุงเทพฯ
+     </p>
+     <br>
+     <p id="address" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">เวลาทำการ : </p><br>
+     <p id="address" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">จันทร์ - ศุกร์ : 10.00&nbsp;น.&nbsp;-&nbsp;22.00&nbsp;น.</p>
+     <p id="address" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">เสาร์&nbsp;-อาทิตย์&nbsp;:&nbsp;-&nbsp;10.00&nbsp;น.</p>
+  
+  <div class="col-xs-12 col-md-auto col-lg-12">
+    <br>
+    <a class="<?php active('btn_registerEmsphere'); ?>" href="index.php?page=btn_registerEmsphere"><button type="button" class="btn btn-warning" id="btnregist">ลงทะเบียน</button></a>
+  </div>
+  
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6" id="bgimg">
+      <img src="../img/1.png" class="img-responsive" width="100%" height="auto">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6" id="bgimg">
+      <img src="../img/dicut/dicut/em2@2x.png" class="img-responsive" width="100%" height="auto">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6" id="bgimg">
+      <img src="../img/dicut/dicut/em3@2x.png" class="img-responsive" width="100%" height="85%">
+    </div>
+  </div>
+<!--END!-->
+
+<br>
+<!--footer!-->
+<?php 
+ include("../../source/footer.html");
+?>
+<!-- <div class="card text-center">
+	<div class="card-footer text-muted">
+    @&nbsp;2017&nbsp;The&nbsp;Mall&nbsp;Group.&nbsp;all&nbsp;rights&nbsp;reserved
+  </div>
+</div>
+ -->
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complete</title>
+<style>
+  /***********************confirm **************************/
+#formconfirm{
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!--content!-->
+
+<br>
+<!---form-->
+<form id="formconfirm" class="needs-validation" novalidate>
+ <!-- <div class="form-row">!-->
+    <div class=" col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <!--nav form!-->
+    <ul class="breadcrumb justify-content-center">
+      <li><a class="<?php active('registerForm'); ?>" href="index.php?page=registerForm">REGISTER</a></li>
+      <li><a class="<?php active('productForm'); ?>" href="index.php?page=productForm">PRODUCT</a></li>
+      <li><a class="<?php active('confirmForm'); ?>" href="index.php?page=confirmForm">CONFIRM</a></li>
+      <li><a class="<?php active('completeForm'); ?>" href="index.php?page=completeForm">COMPLETE</a></li>
+    </ul>
+  </div>
+  <hr style="border: 0.5px solid #DDDDDD;">
+<!--Thank you text-->
+<div class="col-12 col-xs-12 col-md-auto col-lg-12 col-xl-12" id="headcpl">
+    <div class="col-12 col-xs-12 col-md-auto col-lg-12 col-xl-12" id="headcpl">
+        <p class="col-12 col-xs-12 col-sm-12 col-md-auto col-lg-12 col-xl-12" style="font-size:20px; letter-spacing:1px; text-algn:center;"> THANK YOU FOR YOUR INTEREST</p>
+        <p class="col-12 col-xs-12 col-sm-12 col-md-auto col-lg-12 col-xl-12" style=" font-size: 18px; letter-spacing:1px; color:#9B9B9B; text-align: center;">WELL CONTACT YOU SHORTLY</p>
+        <p class="col-12 col-xs-12 col-sm-12 col-md-auto col-lg-12 col-xl-12" style="color:#B9A164; font-size: 20px; text-align: center; font-style: bold;">GUCCI CENTER TRADING</p>
+
+    </div>
+      <div class="cardclass="form-group col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="width: 100%;">
+        <img src="../img/dicut/dicut/qr_code1@1x.PNG" class="card-img-top" style="border-radius:0px; width: 50%" alt="">
+      </div>
+      <div id="headcpl">
+        <p style="font-size:6vw;"> YOUR ID : EM-1029302</p>
+    </div>
+     <div id="headcpl">
+        <p class="col-12 col-xs-12 col-sm-12 col-md-auto col-lg-12 col-xl-12" style="color:#9B9B9B; font-size: 3.2vw; text-align: center;">You can get this code to edit your information through the menu search.</p>
+    </div>
+</div>
+
+  <!--button!-->
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-xs-12 col-md-7 col-lg-8" align="center">
+    <a class="<?php active('btn_backToHome'); ?>" href="index.php?page=btn_backToHome"><button type="button" class="btn btn-dark">BACK TO HOME</button></a>
+  </div>
+</div>
+</form>
+
+<!--footer!-->
+<?php 
+ include("footer.html");
+
+?>
+<!-- <div class="card text-center">
+	<div class="card-footer text-muted">
+    @&nbsp;2017&nbsp;The&nbsp;Mall&nbsp;Group.&nbsp;all&nbsp;rights&nbsp;reserved
+  	</div>
+</div> -->
+
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
